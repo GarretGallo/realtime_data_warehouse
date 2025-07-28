@@ -1,0 +1,14 @@
+[2025-07-28T21:55:41.311+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: customer_dim_generator.generator_customer_dim_data scheduled__2025-06-24T00:00:00+00:00 [queued]>
+[2025-07-28T21:55:44.835+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: customer_dim_generator.generator_customer_dim_data scheduled__2025-06-24T00:00:00+00:00 [queued]>
+[2025-07-28T21:55:44.844+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-07-28T21:55:46.319+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): generator_customer_dim_data> on 2025-06-24 00:00:00+00:00
+[2025-07-28T21:55:46.772+0000] {standard_task_runner.py:57} INFO - Started process 4085 to run task
+[2025-07-28T21:55:47.332+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'customer_dim_generator', 'generator_customer_dim_data', 'scheduled__2025-06-24T00:00:00+00:00', '--job-id', '258', '--raw', '--subdir', 'DAGS_FOLDER/customer_dim_generator.py', '--cfg-path', '/tmp/tmpip5pln3r']
+[2025-07-28T21:55:47.402+0000] {standard_task_runner.py:85} INFO - Job 258: Subtask generator_customer_dim_data
+[2025-07-28T21:55:48.017+0000] {task_command.py:415} INFO - Running <TaskInstance: customer_dim_generator.generator_customer_dim_data scheduled__2025-06-24T00:00:00+00:00 [running]> on host 3be881c1798c
+[2025-07-28T21:55:49.121+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='codewithyu' AIRFLOW_CTX_DAG_ID='customer_dim_generator' AIRFLOW_CTX_TASK_ID='generator_customer_dim_data' AIRFLOW_CTX_EXECUTION_DATE='2025-06-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-24T00:00:00+00:00'
+[2025-07-28T21:55:49.801+0000] {logging_mixin.py:151} INFO - CSV file './large_dim_large_data.csv' with 100 rows created successfully!
+[2025-07-28T21:55:49.816+0000] {python.py:194} INFO - Done. Returned value was: None
+[2025-07-28T21:55:49.878+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=customer_dim_generator, task_id=generator_customer_dim_data, execution_date=20250624T000000, start_date=20250728T215541, end_date=20250728T215549
+[2025-07-28T21:55:50.073+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-07-28T21:55:50.371+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
