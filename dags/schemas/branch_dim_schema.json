@@ -7,7 +7,7 @@
     },
     {
       "name": "branch_name",
-      "name": "STRING"
+      "dataType": "STRING"
     },
     {
       "name": "branch_address",

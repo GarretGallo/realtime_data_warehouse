@@ -13,7 +13,7 @@ default_args = {
 }
 
 num_rows = 100
-output_file = './large_dim_large_data.csv'
+output_file = './customer_dim_large_data.csv'
 
 cities = ['Berlin', 'Middletown', 'Cheshire', 'Southington', 'Bristol']
 regions = ['Hartford', 'New London', 'Windham', 'Fairfield', 'Middlesex']

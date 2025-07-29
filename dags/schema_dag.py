@@ -5,9 +5,9 @@ import pandas as pd
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
-from
+from pinot_schema_operator import PinotSchemaSubmitOperator
 
-start_date = datetime(2024, 9, 15)
+start_date = datetime(2025, 3, 15)
 default_args = {
     'owner': 'GGCODE',
     'depends_on_past': False,
@@ -17,7 +17,7 @@ default_args = {
 
 with DAG(dag_id='schema_dag',
          default_args=default_args,
-         description='A DAG to subit all schema in a folder to Apache Pinot',
+         description='A DAG to submit all schema in a folder to Apache Pinot',
          schedule_interval=timedelta(days=1),
          tags=['schema']) as dag:
 
@@ -32,4 +32,3 @@ with DAG(dag_id='schema_dag',
     end = EmptyOperator(task_id='end')
 
     start >>submit_schema >> end
-
