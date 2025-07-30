@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe207525-0b02-4889-8a51-d9ffe44017be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dags/loader_dag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/pinot_schema_operator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/pinot_table_operator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superset/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superset/superset-init.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superset/superset_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/customer_dim_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/customer_dim_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/schema_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/schema_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/schemas/branch_dim_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dags/schemas/branch_dim_schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/table_dag.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/table_dag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/tables/transaction_facts_schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/dags/tables/transaction_facts_schema.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/dag_processor_manager/dag_processor_manager.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/scheduler/latest" beforeDir="false" afterPath="$PROJECT_DIR$/logs/scheduler/latest" afterDir="false" />
@@ -35,18 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GarretGallo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GarretGallo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GarretGallo/realtime_data_warehouse.git",
-    "accountId": "ffa8cc07-8fe7-41c9-abc9-4c4a8d5861ce"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GarretGallo/realtime_data_warehouse.git&quot;,
+    &quot;accountId&quot;: &quot;ffa8cc07-8fe7-41c9-abc9-4c4a8d5861ce&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -67,6 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHELLCHECK.PATH": "I do mind",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/garretgallo/PycharmProjects/RealtimeDataWarehouse/plugins",
     "node.js.detected.package.eslint": "true",
@@ -104,7 +98,8 @@
       <updated>1753654622489</updated>
       <workItem from="1753654623528" duration="10374000" />
       <workItem from="1753732020757" duration="12042000" />
-      <workItem from="1753821323913" duration="8634000" />
+      <workItem from="1753821323913" duration="8728000" />
+      <workItem from="1753893757158" duration="8780000" />
     </task>
     <servers />
   </component>
