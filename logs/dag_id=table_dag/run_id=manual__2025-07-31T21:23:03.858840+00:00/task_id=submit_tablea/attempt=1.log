@@ -1,0 +1,16 @@
+[2025-07-31T21:23:05.790+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: table_dag.submit_tablea manual__2025-07-31T21:23:03.858840+00:00 [queued]>
+[2025-07-31T21:23:05.796+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: table_dag.submit_tablea manual__2025-07-31T21:23:03.858840+00:00 [queued]>
+[2025-07-31T21:23:05.796+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-07-31T21:23:05.804+0000] {taskinstance.py:1380} INFO - Executing <Task(PinotTableSubmitOperator): submit_tablea> on 2025-07-31 21:23:03.858840+00:00
+[2025-07-31T21:23:05.808+0000] {standard_task_runner.py:57} INFO - Started process 605 to run task
+[2025-07-31T21:23:05.811+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'table_dag', 'submit_tablea', 'manual__2025-07-31T21:23:03.858840+00:00', '--job-id', '960', '--raw', '--subdir', 'DAGS_FOLDER/table_dag.py', '--cfg-path', '/tmp/tmphhmu9m0p']
+[2025-07-31T21:23:05.814+0000] {standard_task_runner.py:85} INFO - Job 960: Subtask submit_tablea
+[2025-07-31T21:23:05.845+0000] {task_command.py:415} INFO - Running <TaskInstance: table_dag.submit_tablea manual__2025-07-31T21:23:03.858840+00:00 [running]> on host ba5ca71193ef
+[2025-07-31T21:23:05.895+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='GGCODE' AIRFLOW_CTX_DAG_ID='table_dag' AIRFLOW_CTX_TASK_ID='submit_tablea' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T21:23:03.858840+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T21:23:03.858840+00:00'
+[2025-07-31T21:23:05.980+0000] {pinot_table_operator.py:26} INFO - Pinot table submitted to Apache Pinot! /opt/***/dags/tables/accounts_dim_schema.json
+[2025-07-31T21:23:06.397+0000] {pinot_table_operator.py:26} INFO - Pinot table submitted to Apache Pinot! /opt/***/dags/tables/transaction_facts_schema.json
+[2025-07-31T21:23:06.430+0000] {pinot_table_operator.py:26} INFO - Pinot table submitted to Apache Pinot! /opt/***/dags/tables/customer_dim_schema.json
+[2025-07-31T21:23:06.469+0000] {pinot_table_operator.py:26} INFO - Pinot table submitted to Apache Pinot! /opt/***/dags/tables/branch_dim_schema.json
+[2025-07-31T21:23:06.479+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=table_dag, task_id=submit_tablea, execution_date=20250731T212303, start_date=20250731T212305, end_date=20250731T212306
+[2025-07-31T21:23:06.531+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-07-31T21:23:06.554+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

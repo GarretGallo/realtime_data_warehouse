@@ -1,0 +1,16 @@
+[2025-07-31T21:56:06.275+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: schema_dag.submit_schema manual__2025-07-31T21:56:03.718355+00:00 [queued]>
+[2025-07-31T21:56:06.290+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: schema_dag.submit_schema manual__2025-07-31T21:56:03.718355+00:00 [queued]>
+[2025-07-31T21:56:06.291+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-07-31T21:56:06.421+0000] {taskinstance.py:1380} INFO - Executing <Task(PinotSchemaSubmitOperator): submit_schema> on 2025-07-31 21:56:03.718355+00:00
+[2025-07-31T21:56:06.447+0000] {standard_task_runner.py:57} INFO - Started process 2973 to run task
+[2025-07-31T21:56:06.449+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'schema_dag', 'submit_schema', 'manual__2025-07-31T21:56:03.718355+00:00', '--job-id', '1169', '--raw', '--subdir', 'DAGS_FOLDER/schema_dag.py', '--cfg-path', '/tmp/tmpbqysoh14']
+[2025-07-31T21:56:06.462+0000] {standard_task_runner.py:85} INFO - Job 1169: Subtask submit_schema
+[2025-07-31T21:56:06.561+0000] {task_command.py:415} INFO - Running <TaskInstance: schema_dag.submit_schema manual__2025-07-31T21:56:03.718355+00:00 [running]> on host d47ad9177d65
+[2025-07-31T21:56:06.686+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='GGCODE' AIRFLOW_CTX_DAG_ID='schema_dag' AIRFLOW_CTX_TASK_ID='submit_schema' AIRFLOW_CTX_EXECUTION_DATE='2025-07-31T21:56:03.718355+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-31T21:56:03.718355+00:00'
+[2025-07-31T21:56:06.775+0000] {pinot_schema_operator.py:26} INFO - Pinot schema submitted to Apache Pinot! /opt/***/dags/schemas/accounts_dim_schema.json
+[2025-07-31T21:56:06.815+0000] {pinot_schema_operator.py:26} INFO - Pinot schema submitted to Apache Pinot! /opt/***/dags/schemas/transaction_facts_schema.json
+[2025-07-31T21:56:06.830+0000] {pinot_schema_operator.py:26} INFO - Pinot schema submitted to Apache Pinot! /opt/***/dags/schemas/customer_dim_schema.json
+[2025-07-31T21:56:06.859+0000] {pinot_schema_operator.py:26} INFO - Pinot schema submitted to Apache Pinot! /opt/***/dags/schemas/branch_dim_schema.json
+[2025-07-31T21:56:06.871+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=schema_dag, task_id=submit_schema, execution_date=20250731T215603, start_date=20250731T215606, end_date=20250731T215606
+[2025-07-31T21:56:06.940+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-07-31T21:56:06.987+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

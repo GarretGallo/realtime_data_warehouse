@@ -1,0 +1,23 @@
+[2025-07-31T21:19:28.845+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dimension_batch_ingestion.ingest_customer_dim scheduled__2025-07-30T00:00:00+00:00 [queued]>
+[2025-07-31T21:19:28.859+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dimension_batch_ingestion.ingest_customer_dim scheduled__2025-07-30T00:00:00+00:00 [queued]>
+[2025-07-31T21:19:28.860+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2025-07-31T21:19:28.873+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): ingest_customer_dim> on 2025-07-30 00:00:00+00:00
+[2025-07-31T21:19:28.877+0000] {standard_task_runner.py:57} INFO - Started process 252 to run task
+[2025-07-31T21:19:28.880+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'dimension_batch_ingestion', 'ingest_customer_dim', 'scheduled__2025-07-30T00:00:00+00:00', '--job-id', '953', '--raw', '--subdir', 'DAGS_FOLDER/loader_dag.py', '--cfg-path', '/tmp/tmppfpqwykz']
+[2025-07-31T21:19:28.882+0000] {standard_task_runner.py:85} INFO - Job 953: Subtask ingest_customer_dim
+[2025-07-31T21:19:28.933+0000] {task_command.py:415} INFO - Running <TaskInstance: dimension_batch_ingestion.ingest_customer_dim scheduled__2025-07-30T00:00:00+00:00 [running]> on host ba5ca71193ef
+[2025-07-31T21:19:29.025+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='GGCODE' AIRFLOW_CTX_DAG_ID='dimension_batch_ingestion' AIRFLOW_CTX_TASK_ID='ingest_customer_dim' AIRFLOW_CTX_EXECUTION_DATE='2025-07-30T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-30T00:00:00+00:00'
+[2025-07-31T21:19:29.027+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-07-31T21:19:29.028+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'curl -X POST -F file=@/opt/***/customer_dim_large_data.csv -H "Content-Type: multipart/form-data" "http://pinot-controller:9000/ingestFromFile?tableNameWithType=customer_dim_OFFLINE&batchConfigMapStr=%7B%22inputFormat%22%3A%22csv%22%2C%22recordReader.prop.delimiter%22%3A%22%2C%22%7D"']
+[2025-07-31T21:19:29.038+0000] {subprocess.py:86} INFO - Output:
+[2025-07-31T21:19:29.042+0000] {subprocess.py:93} INFO - curl: (26) Failed to open/read local data from file/application
+[2025-07-31T21:19:29.042+0000] {subprocess.py:97} INFO - Command exited with return code 26
+[2025-07-31T21:19:29.059+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 26.
+[2025-07-31T21:19:29.062+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=dimension_batch_ingestion, task_id=ingest_customer_dim, execution_date=20250730T000000, start_date=20250731T211928, end_date=20250731T211929
+[2025-07-31T21:19:29.079+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 953 for task ingest_customer_dim (Bash command failed. The command returned a non-zero exit code 26.; 252)
+[2025-07-31T21:19:29.103+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-07-31T21:19:29.164+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
